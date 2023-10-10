@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+// @ts-ignore
 import Modal from "../ui/Modal.jsx";
 // @ts-ignore
 import tmdbApi, { category } from "../api/tmdbApi.js";
@@ -7,6 +8,10 @@ const HeroSliderTrailerModal = ({
   movieId,
   modalIsOpen,
   closeTrailerModal,
+}: {
+  movieId: number;
+  modalIsOpen: boolean;
+  closeTrailerModal: () => void;
 }) => {
   const [videoSrc, setVideoSrc] = useState("");
 
